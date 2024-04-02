@@ -1,0 +1,15 @@
+{% extends "master.html" %}
+
+{% block title %}
+ Details about {{ mydog.name }} {{ mydog.race }}
+{% endblock %}
+
+{% block content %}
+<div class="mycard">
+    <h1>{{ mydog.name }} {{ mydog.race }}</h1>
+    <p>Birth date: {{ mydog.birth_date }}</p>
+    <p>Age: {{ mydog.age }}</p>
+    <p>Back to <a href="/dogs">Dogs</a></p>
+</div>
+
+{% endblock %}

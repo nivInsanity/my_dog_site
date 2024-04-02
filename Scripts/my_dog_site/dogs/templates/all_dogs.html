@@ -1,0 +1,17 @@
+{% extends "master.html" %}
+
+{% block title %}
+ My Dogs - List of all dogs
+{% endblock %}
+
+{% block content %}
+    <div class="mycard">
+        <h1>Dogs</h1>
+
+        <ul>
+            {% for x in mydogs %}
+            <li><a href="details/{{ x.id }}">{{ x.name }} {{ x.race }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
